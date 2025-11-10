@@ -1,0 +1,117 @@
+.select-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wrapper {
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  background: white;
+  outline: none;
+}
+
+.wrapper:hover,
+.wrapper:focus,
+.wrapper.active {
+  border-bottom: 2px solid #0066cc;
+}
+
+.main-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 12px;
+}
+
+.main-input:hover {
+  background: #ffffff;
+}
+
+.main-input.active {
+  background: #ffffff;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: black;
+}
+
+.btn-clear {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.main-input:hover .btn-clear {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 1;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  transform: translateX(-1px);
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 10;
+  border: 1px solid #f0f0f0;
+  max-height: 250px;
+  overflow-y: auto;
+  outline: none;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+
+.option.disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+.option.highlight {
+  background: #e8e8e8;
+}
+
+.option.selected {
+  background: #dedede;
+}
+
+.select-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
